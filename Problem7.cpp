@@ -15,7 +15,7 @@
 #include <string>
 
 /********************************************************************/
-/*circular array data type structure of size 5, FIFO,
+/* Queue data structure from circular array of size 5, FIFO,
  * note: operations are only really relevent for this problem,
  * for a circular array with typical implementation and oper.
  * look in the data structures folder. */
