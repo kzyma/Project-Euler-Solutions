@@ -17,7 +17,7 @@
 /********************************************************************/
 /* Queue data structure from circular array of size 5, FIFO,
  * note: operations are only really relevent for this problem,
- * for a circular array with typical implementation and oper.
+ * for a queue with typical implementation and operations
  * look in the data structures folder. */
 class FixedSizeQueue{
 private:
