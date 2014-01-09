@@ -30,7 +30,7 @@ int main(){
 }
 
 /*returns true if parameter is prime, false otherwise*/
-bool isPrime(int n){
+bool isPrime(const int n){
     int max = sqrt(n);
     for (int i=2; i<=max; i++) {
         if (n%i==0) {

@@ -12,17 +12,15 @@
 #include <math.h> 
 
 long findLargestPrimeFactor(long);
-bool isPrime(long);
 
 int main(){
-    long largestFactor;
+    long largestFactor=0;
     largestFactor = findLargestPrimeFactor(600851475143);
     std::cout<<"Largest Prime Factor is: "<<largestFactor<<std::endl;
     return 0;
 }
 
 long findLargestPrimeFactor(long number){
-    long count;
     for (long count=2; count<(number/2); count++) {
         if((number%count)==0){
             number /= count;

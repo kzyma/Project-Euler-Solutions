@@ -16,7 +16,7 @@
 
 /********************************************************************/
 /* Queue data structure from circular array of size 5, FIFO,
- * note: operations are only really relevent for this problem,
+ * note: operations are only relevent for this problem,
  * for a queue with typical implementation and operations
  * look in the data structures folder. */
 class FixedSizeQueue{
@@ -46,7 +46,6 @@ public:
         return product;
     }
     friend std::ostream& operator<<(std::ostream&, const FixedSizeQueue&);
-    friend std::istream& operator>>(std::istream&, FixedSizeQueue&);
     FixedSizeQueue& operator=(const FixedSizeQueue&);
 };
 //nonmember functions
@@ -55,10 +54,6 @@ std::ostream& operator<<(std::ostream& os, const FixedSizeQueue& q){
         os<<std::dec<<q.intBuffer[i];
     }
     return os;
-}
-std::istream& operator>>(std::istream& is,FixedSizeQueue& q){
-    is>>q.intBuffer[q.index];
-    return is;
 }
 FixedSizeQueue& FixedSizeQueue::operator= (const FixedSizeQueue& q){
     for (int i=0; i<5; i++) {

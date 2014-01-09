@@ -13,7 +13,6 @@
 #include <string>
 
 bool isPalindrome(int);
-long findLargestPalindrome(int,int);
 
 int main(){
     int max = 999;
@@ -21,7 +20,7 @@ int main(){
     
     for (int i=0; i<=max; i++) {
         for (int j=0; j<=max; j++) {
-            if ((isPalindrome(i*j))&&((i*j)>currentLargestPalindrome)){
+            if (isPalindrome(i*j)&&((i*j)>currentLargestPalindrome)){
                 currentLargestPalindrome = (i*j);
             }
         }
@@ -34,7 +33,7 @@ int main(){
 
 /*function returns true if integer passed is a palindrome, false
  * otherwise */
-bool isPalindrome(int palindromicNumber){
+bool isPalindrome(const int palindromicNumber){
     
     std::string originalStr = std::to_string(palindromicNumber);
     std::size_t size = originalStr.length();

@@ -30,7 +30,7 @@ int main(){
 
 /* returns true if a divides b,
  * and false otherwise */
-bool isEvenlyDivisible(int a,int b){
+bool isEvenlyDivisible(const int a,const int b){
     if (b%a==0) {
         return true;
     }else{
