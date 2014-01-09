@@ -6,7 +6,7 @@
  *       project Euler. http://projecteuler.net/
  *
  *   Problem:There exists exactly one Pythagorean triplet for 
- *           which a + b + c 1000. Find the product abc.
+ *           which a + b + c = 1000. Find the product of abc.
  *
  *************************************************************/
 
