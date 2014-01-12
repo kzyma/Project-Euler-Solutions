@@ -21,7 +21,7 @@ int main(){
     long sum=17;
     long max=2000000;
     
-    for (long i= 8; i<max; i++) {
+    for (long i= 9; i<max; i=i+2) {
         if (isPrime(i)) {
             sum+=i;
         }
