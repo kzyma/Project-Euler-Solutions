@@ -12,8 +12,7 @@
 
 /*value semantics */
 template<class T>
-DynamicArray<T>::DynamicArray(const std::size_t capacity):size(0),capacity(capacity){
-    this->array=new T[capacity];
+DynamicArray<T>::DynamicArray(const std::size_t capacity):size(0),capacity(capacity),array(new T[capacity]){
 }
 
 template<class T>
@@ -29,6 +28,11 @@ DynamicArray<T>::DynamicArray(const DynamicArray<T>& original){
 
 template<class T>
 DynamicArray<T> DynamicArray<T>::operator =(const DynamicArray<T>& rhs){
+    //check if both occupy same memory address
+    if (this==&rhs) {
+        return *this;
+    }
+    
     delete[] array;
     this->capacity=rhs.capacity;
     this->size=rhs.size;
@@ -44,6 +48,7 @@ DynamicArray<T> DynamicArray<T>::operator =(const DynamicArray<T>& rhs){
 template<class T>
 DynamicArray<T>::~DynamicArray(){
     delete[] array;
+    array = nullptr;
 }
 
 template<class T>
@@ -91,13 +96,13 @@ void DynamicArray<T>::shrinkToFit(){
 }
 
 //element access
-/*note, "dont pay for things you wont use", just keep in mind
- * there is no bounds checking for arrays of any primatives
- * and there is not here either */
 template<class T>
 T const& DynamicArray<T>::operator[](size_t position) const{
-    return array[position];
-
+    if (position<this->size) {
+        return array[position];
+    }else{
+        throw std::out_of_range("Error: index out of range");
+    }
 }
 
 template<class T>

@@ -68,7 +68,6 @@ public:
     void clear();
     
 };
-//nonmember functions
 
 #include "dynamic_array.cxx"
 #endif /*PROJECTEULER_DATASTRUCTURES/DYNAMICARRAY_DYNAMICARRAY_H*/

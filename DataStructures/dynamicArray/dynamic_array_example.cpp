@@ -37,6 +37,13 @@ int main(){
     std::cout<<"contents of arrayB after clear: "<<std::endl;
     printArray(arrayB);
     
+    //out of range example
+    try {
+        array[-1];
+    } catch (const std::out_of_range& ra) {
+        std::cout<<ra.what()<<std::endl;
+    }
+    
     //add integers to arrayB
     for (int i=4; i>=0; i--) {
         arrayB.insert(i);
