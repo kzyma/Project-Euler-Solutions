@@ -5,7 +5,7 @@
  *   This file is the solution to Problem 6 found on
  *       project Euler. http://projecteuler.net/
  *
- *   Problem: What is the 10 001st prime number?
+ *   Problem: What is the 10,001th prime number?
  *
  *************************************************************/
 
